@@ -27,9 +27,9 @@ function generatePassword () {
   }
   if (!(passwordLength >= 8 && passwordLength <= 128)) {
     window.alert("Password length must be a number bewtween 8 and 128.")
-    generatePassword();
+    return generatePassword();
   }
-
+console.log(passwordLength);
   //create array to store characters
   var characters = [];
 
@@ -40,6 +40,7 @@ function generatePassword () {
   if (lowerCase) {
     characters.push("a", "b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z");
   }
+console.log(characters);
 
   //confirm to include uppercase
       //if true pass characters to array
@@ -47,6 +48,7 @@ function generatePassword () {
   if (upperCase) {
     characters.push("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z")
   }
+  console.log(characters);
 
   //confirm to include numberic
       //if true pass characters to array
@@ -54,6 +56,7 @@ function generatePassword () {
   if (numbers) {
     characters.push("1","2","3","4","5","6","7","8","9","0");
   }
+  console.log(characters);
 
   //confirm to include special characters
       //if true pass characters to array
@@ -61,6 +64,8 @@ function generatePassword () {
   if (special) {
     characters.push(" ", "!", '"', "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", "/")
   }
+  console.log(characters);
+  console.log(characters.length);
 
   //restart process if no character set has been selected
   if (characters.length < 1) {
