@@ -69,7 +69,7 @@ function generatePassword () {
   //restart process if no character set has been selected
   if (characters.length < 1) {
     window.alert("Password must include at least one set of characters");
-    generatePassword();
+    return generatePassword();
   }
 
  
